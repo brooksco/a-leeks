@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alix Pauchet</title>
+    <link href="./css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 class="sr-only">Alix Pauchet</h1>
+    <div class="container">
+      <!-- <div class="letter">A</div> -->
+      <svg
+        class="letter"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M 10,90 L 50,10 L 90,90 M 25,60 L 75,60"
+          fill="none"
+          stroke-linejoin="miter"
+          stroke-miterlimit="2" />
+      </svg>
+      <div class="image">
+        <img src="./img/leeks.jpg"/ alt="A row of green leeks tied at the top.">
+      </div>
+    </div>
+
+    <script>
+      function randomizeColors() {
+        const hue = Math.floor(Math.random() * 360);
+        const complementaryHue = (hue + 180) % 360;
+        const lightnessTop = 80;
+        const lightnessBottom = 40;
+        const lightness = lightnessBottom + Math.floor(Math.random() * (lightnessTop - lightnessBottom));
+
+        document.documentElement.style.setProperty(
+          '--color-letter-1',
+          `hsl(${hue}, 100%, ${lightness}%)`
+        );
+        document.documentElement.style.setProperty(
+          '--color-letter-2',
+          `hsl(${complementaryHue}, 100%, ${lightness}%)`
+        );
+      }
+
+      randomizeColors();
+
+      document
+        .querySelector('.letter')
+        .addEventListener('click', randomizeColors);
+    </script>
+  </body>
+</html>
