@@ -7,9 +7,6 @@
 :root {
   --color-background: ffffff;
   --color-foreground: #333333;
-
-  /* --color-letter-1: pink;
-  --color-letter-2: orange; */
 }
 
 body {
@@ -33,16 +30,9 @@ body {
 }
 
 .letter {
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: clamp(8rem, 40vw, 64rem);
-  font-weight: bold;
-  padding: 1rem; */
   user-select: none;
   height: 100%;
   width: 100%;
-  /* stroke: var(--color-foreground); */
   stroke: var(--color-letter-1);
   background: var(--color-letter-2);
   stroke-width: 8;
